@@ -33,6 +33,10 @@
                   font-size: 16px;
               }
               
+              .icon {
+                  display: none;
+              }
+              
               .subheading {
                   font-family: arial;
                   font-size: 13px;
@@ -40,6 +44,12 @@
                   text-align: center;
                   text-decoration: none;
                   margin-top: 2px;
+              }
+              
+              .sub {
+                  display: none;
+                  color: white;
+                  list-style: none;
               }
               
               .heading {
@@ -110,7 +120,7 @@
               .line {
                   margin-top: 10px;
                   opacity: 0.1;
-                  width: 99%;
+                  width: 100%;
               }
               
               .size {
@@ -128,7 +138,7 @@
               }
               
               .blowline {
-                  width: 300%;
+                  width: 100%;
                   opacity: 0.2;
               }
               
@@ -147,7 +157,7 @@
               
               hr {
                   float: left;
-                  width: 100%
+                  width: 99%
               }
               
               @media screen and (max-width: 600px) {
@@ -190,11 +200,17 @@
                   .subheading hr {
                       color: white;
                   }
+                  .line {
+                      margin-top: 10px;
+                      opacity: 0.1;
+                      width: 97%;
+                  }
                   .icon {
                       display: inline;
                       position: absolute;
-                      color: white;
+                      color: #d3d3d3;
                       margin-top: 15px;
+                      left: 82.5%;
                   }
                   .grid-container {
                       display: grid;
@@ -241,8 +257,6 @@
                   .icon {
                       display: inline;
                       position: absolute;
-                      right: 0;
-                      top: 0;
                   }
                   .grid-container {
                       display: grid;
