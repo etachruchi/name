@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <srcipt src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></srcipt>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="main">
+            <form class="form" name="Form" method="post">
+
+                <div class="header">
+                    Assignment2
+                </div>
+                <div class="alerts">
+                    <a id="click" href="">Click</a>&nbsp;&nbsp;
+                    <a id="mouseover" href="">Mouseover</a>&nbsp;&nbsp;
+                    <a id="mouseout" href="">Mouseout</a>
+                </div>
+                <br>
+                <div class="alerts">
+                    <input type="text" id="onfocus" placeholder="onfocus" name="" value="">
+                    <br></br>
+                    <input type="text" placeholder="key up and key down" id="keyupdown" name="" value="">
+                </div>
+                <div class="alerts">
+                    <span id="welcome">welcome</span>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        $("#click").click(function() {
+            alert("Clicked");
+        });
+        $("#mouseover").mouseover(function() {
+            alert("Mouseover");
+        });
+        $("#mouseout").mouseout(function() {
+            alert("Mouseout");
+        });
+        $("#onfocus").focus(function() {
+            $("#welcome").css("display", "inline").fadeOut(2000);
+        });
+        $("#focusblur").blur(function() {
+            alert("Blur");
+        });
+        $("#keyupdown").keydown(function() {
+            $("#keyupdown").css("background", red);
+        });
+        $("#keyupdown").keyup(function() {
+            $("#keyupdown").css("background",
+                "green");
+        });
+    </script>
+</body>
+
+</html>
