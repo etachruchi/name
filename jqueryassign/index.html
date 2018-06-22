@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <srcipt src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></srcipt>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="main">
+            <form class="form" name="Form" method="post" onsubmit="return validate(this);">
+
+                <div class="header">Login Form
+                </div>
+                <label>Email :</label>
+
+                <input type="text" placeholder="Email" maxlength="30" onkeyup=" return emailvalidation()" name="email" id="email">
+                <div id="err1" style="color:red;"> </div>
+
+                <label>Password :</label>
+
+                <input type="password" placeholder="Password" maxlength="8" name="password" id="password">
+                <label>Confirm Password:</label>
+                <input type="password" name=" conpassword" maxlength="8" onkeyup=" return validatepass()" placeholder="confirm Password" id="conpassword">
+                <div id="err3" style="color:red;"> </div>
+
+                <input type="checkbox" id="checkbox" name="checkbox" value="check"> Agree to Terms & Conditions
+                <button id="button" value="submit" type="submit">Submit </button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        function emailvalidation() {
+            var email = $("#email").val();
+            var email1 = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (email1.test(email) == false) {
+
+                $('#err1').html("email is not valid");
+
+                $('#email').css("border", "2px solid red");
+
+            } else if (email1.test(email) == true) {
+
+                $('#err1').hide();
+                $('#email').css("border", "2px solid green");
+
+                return true;
+            }
+        }
+
+        function validatepass() {
+            var pass1 = $("#password").val();
+            var pass2 = $("#conpassword").val();
+
+            if (pass1 != pass2) {
+                $('#err2').html("Password doesn't match. ");
+                $('#conpassword').css("border", "2px solid red");
+                return false;
+            } else {
+                $('#err2').html("password match.");
+                $('#err2').css("color", "green");
+                $('#conpassword').css("border", "2px solid green");
+                return true;
+            }
+
+        }
+
+        function validate() {
+            var email = $("#email").val();
+            var pass = $("#password").val();
+            var pass1 = $("#conpassword").val();
+            var error = 0;
+            var email_regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (email_regex.test(email) == false) {
+                alert("Please Enter email");
+                return false;
+
+            } else if (pass.length == 0) {
+                alert("Please Enter Password");
+                return false;
+            } else if (pass1.length == 0) {
+                alert("Please confirmpassword");
+                return false;
+            }
+            if (!($('#checkbox').is(':checked'))) {
+                error = 1
+                alert("Please Tick the Agree to Terms of Use");
+            }
+
+            if (error) {
+                return false;
+            } else {
+                alert("Form successfully submitted.");
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
