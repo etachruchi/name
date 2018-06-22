@@ -1,0 +1,49 @@
+#container {
+    width: 100%;
+}
+
+form {
+    width: 300px;
+    padding: 0 50px 20px;
+    background: linear-gradient(#FFF, #CEBA53);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px;
+    font-family: 'Marcellus', serif;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.header {
+    background: linear-gradient(#FFF, #CEBA53);
+    font-size: 30px;
+    text-align: center;
+    width: 93%;
+}
+
+label {
+    font-size: 17px
+}
+
+input {
+    width: 94%;
+    padding: 10px;
+    margin: 6px 0 20px;
+    border: none;
+    box-shadow: 0 0 5px
+}
+
+#button {
+    width: 95%;
+    margin-top: 20px;
+    font-size: 18px;
+    background: linear-gradient(#22abe9 5%, #36caf0 100%);
+    border: 1px solid #0F799E;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #13506D
+}
+
+input#checkbox {
+    width: 10px;
+}

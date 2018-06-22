@@ -47,7 +47,7 @@
         .heading {
             background-color: #E8E8E8;
             margin-top: 20px;
-            width: 100%;
+            width: 94%;
             padding: 3%;
         }
         
@@ -79,6 +79,7 @@
             font-family: arial;
             font-size: 20px;
             color: #2a2a2a;
+            margin-bottom: 10px;
         }
         
         .grid-container {
@@ -158,6 +159,25 @@
             margin-top: 10px;
         }
         
+        .icon {
+            display: none;
+        }
+        
+        .subheading {
+            font-family: arial;
+            font-size: 13px;
+            float: left;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 2px;
+        }
+        
+        .sub {
+            display: none;
+            color: white;
+            list-style: none;
+        }
+        
         .line2 {
             margin-top: 40px;
             opacity: 0.2;
@@ -228,14 +248,21 @@
             .icon {
                 display: inline;
                 position: absolute;
-                color: white;
+                color: #d3d3d3;
                 margin-top: 15px;
+                left: 86%;
             }
             .grid-container {
                 display: grid;
                 grid-template-columns: auto;
                 margin: 0 auto;
                 width: 100%;
+                grid-row-gap: 20px;
+            }
+            .para {
+                width: 90%;
+                margin-left: 30px;
+                padding-bottom: 10px;
             }
         }
         
@@ -260,6 +287,7 @@
                 grid-template-columns: auto auto;
                 margin: 0 auto;
                 width: 100%;
+                grid-row-gap: 20px;
             }
         }
         
@@ -282,5 +310,6 @@
                 grid-template-columns: auto auto auto auto;
                 margin: 0 auto;
                 width: 100%;
+                grid-row-gap: 20px;
             }
         }
